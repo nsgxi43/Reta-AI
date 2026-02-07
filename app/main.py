@@ -1,0 +1,1 @@
+#source reta-ai-env/bin/activate    
