@@ -12,9 +12,14 @@ class VectorSearch:
     def __init__(self):
         self.embedder = Embedder()
         self.index = faiss.read_index(str(INDEX_PATH))
+        
 
         with open(META_PATH, "rb") as f:
             self.products = pickle.load(f)
+
+    def get_all_products(self):
+        return self.products
+
 
     def search(self, query: str, top_k: int = 5):
         query_vector = self.embedder.embed([query])
