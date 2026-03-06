@@ -24,7 +24,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-rag = RAGService()
+rag = None
+
+@app.on_event("startup")
+def load_rag():
+    global rag
+    rag = RAGService()
 
 
 # ── Request / Response schemas ───────────────────────────────────
