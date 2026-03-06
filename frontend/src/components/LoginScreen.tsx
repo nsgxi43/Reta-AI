@@ -476,28 +476,34 @@ function ModeSelection({
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.4 }}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+        className="flex flex-col gap-4 w-full max-w-xs mx-auto"
       >
         <button
           onClick={() => onSelectMode("voice")}
-          className="group flex flex-col items-center justify-center p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300 aspect-square sm:aspect-auto sm:h-48"
+          className="group relative p-5 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-5 overflow-hidden"
         >
-          <div className="w-16 h-16 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <Mic className="w-8 h-8" />
+          <div className="absolute inset-0 bg-indigo-500/10 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity" />
+          <div className="p-3 rounded-full bg-indigo-500/20 text-indigo-400">
+            <Mic className="w-5 h-5" />
           </div>
-          <span className="text-lg font-medium text-white">Voice</span>
-          <span className="text-sm text-zinc-500 mt-1">Talk to me</span>
+          <div className="text-left">
+            <span className="text-base font-medium text-zinc-100 block">Voice</span>
+            <span className="text-xs text-zinc-500">Talk to me</span>
+          </div>
         </button>
 
         <button
           onClick={() => onSelectMode("text")}
-          className="group flex flex-col items-center justify-center p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300 aspect-square sm:aspect-auto sm:h-48"
+          className="group relative p-5 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-5 overflow-hidden"
         >
-          <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <MessageSquare className="w-8 h-8" />
+          <div className="absolute inset-0 bg-emerald-500/10 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity" />
+          <div className="p-3 rounded-full bg-emerald-500/20 text-emerald-400">
+            <MessageSquare className="w-5 h-5" />
           </div>
-          <span className="text-lg font-medium text-white">Text</span>
-          <span className="text-sm text-zinc-500 mt-1">Chat with me</span>
+          <div className="text-left">
+            <span className="text-base font-medium text-zinc-100 block">Text</span>
+            <span className="text-xs text-zinc-500">Chat with me</span>
+          </div>
         </button>
       </motion.div>
     </motion.div>
