@@ -1,8 +1,11 @@
 import os
 from google import genai
 
+_api_key = os.environ.get("GEMINI_API_KEY")
+if not _api_key:
+    raise RuntimeError("GEMINI_API_KEY environment variable is not set")
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+client = genai.Client(api_key=_api_key)
 
 MODEL_NAME = "models/gemini-2.5-flash-lite"
 
