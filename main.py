@@ -11,8 +11,6 @@ from typing import Optional
 import io
 import re
 
-from services.rag_service import RAGService
-
 # ── Initialise once ──────────────────────────────────────────────
 app = FastAPI(title="Reta AI", version="1.0.0")
 
@@ -24,12 +22,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-rag = None
+_rag = None
 
-@app.on_event("startup")
-def load_rag():
-    global rag
-    rag = RAGService()
+def get_rag():
+    global _rag
+    if _rag is None:
+        from services.rag_service import RAGService
+        _rag = RAGService()
+    return _rag
 
 
 # ── Request / Response schemas ───────────────────────────────────
@@ -67,7 +67,7 @@ async def health():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
-    result = rag.query(req.query)
+    result = get_rag().query(req.query)
 
     parsed = result.get("parsed", {})
     primary = result.get("primary")
