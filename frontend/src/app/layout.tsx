@@ -25,8 +25,8 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
       </head>
-      <body className="antialiased min-h-screen flex flex-col items-center justify-center bg-zinc-50">
-        <div className="w-full max-w-md h-[100dvh] bg-white shadow-2xl overflow-hidden relative border-x border-zinc-100 flex flex-col">
+      <body className="antialiased min-h-dvh flex flex-col items-center bg-black sm:justify-center sm:bg-zinc-950">
+        <div className="w-full sm:max-w-md h-[100dvh] overflow-hidden relative flex flex-col sm:shadow-2xl sm:border-x sm:border-zinc-800">
            {children}
         </div>
       </body>

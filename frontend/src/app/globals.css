@@ -82,6 +82,11 @@ body {
   }
 }
 
+/* iOS safe area support */
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
 /* Scrollbar styling for a cleaner look */
 ::-webkit-scrollbar {
   width: 6px;

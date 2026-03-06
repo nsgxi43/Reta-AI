@@ -117,19 +117,19 @@ export function LoginScreen({ onLogin }: LoginProps) {
               animate="center"
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="space-y-12 text-center"
+                className="space-y-6 sm:space-y-12 text-center"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="flex items-center justify-center p-8"
+                className="flex items-center justify-center p-4 sm:p-8"
               >
                 <div className="text-center space-y-2">
-                  <h1 className="text-6xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-sm px-4">
+                  <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-sm px-4">
                     RetAIl
                   </h1>
-                  <p className="text-xl md:text-2xl text-white font-light tracking-wide opacity-90">
+                  <p className="text-lg sm:text-xl md:text-2xl text-white font-light tracking-wide opacity-90">
                     Made shopping easy
                   </p>
                 </div>
@@ -140,14 +140,14 @@ export function LoginScreen({ onLogin }: LoginProps) {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.96 }}
                   onClick={handleGuestLogin}
-                  className="group relative p-6 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-6 overflow-hidden"
+                  className="group relative p-4 sm:p-6 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-4 sm:gap-6 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-active:opacity-100 transition-opacity duration-300 rounded-3xl" />
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity" />
                   <div className="p-3 rounded-full bg-blue-500/20 text-blue-400">
                     <Ghost className="w-6 h-6" />
                   </div>
-                  <span className="text-xl font-medium text-zinc-100">
+                  <span className="text-base sm:text-xl font-medium text-zinc-100">
                     Guest Login
                   </span>
                 </motion.button>
@@ -156,14 +156,14 @@ export function LoginScreen({ onLogin }: LoginProps) {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.96 }}
                   onClick={handleNameLogin}
-                  className="group relative p-6 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-6 overflow-hidden"
+                  className="group relative p-4 sm:p-6 rounded-3xl bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800/50 hover:border-zinc-700 transition-all duration-300 flex items-center gap-4 sm:gap-6 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-purple-500/10 opacity-0 group-active:opacity-100 transition-opacity duration-300 rounded-3xl" />
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity" />
                   <div className="p-3 rounded-full bg-purple-500/20 text-purple-400">
                     <User className="w-6 h-6" />
                   </div>
-                  <span className="text-xl font-medium text-zinc-100">
+                  <span className="text-base sm:text-xl font-medium text-zinc-100">
                     Login by Name
                   </span>
                 </motion.button>

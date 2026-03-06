@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <main className="flex-1 w-full h-full flex flex-col relative overflow-hidden bg-black text-foreground">
       {/* Ambient Background Effects */}
-      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-purple-900/40 rounded-full blur-[120px] pointer-events-none z-0" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-blue-900/40 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] max-w-[500px] max-h-[500px] bg-purple-900/40 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] max-w-[500px] max-h-[500px] bg-blue-900/40 rounded-full blur-[120px] pointer-events-none z-0" />
 
       <div className="relative z-10 w-full h-full flex flex-col">
         {!user ? (
