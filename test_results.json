@@ -1,0 +1,87 @@
+[
+  {
+    "query_num": 1,
+    "query": "What products do you have?",
+    "response": "Hi there! We have Tide Plus 500g for \u20b969, which you can find in our Orange Zone. A helpful tip is to use the recommended amount for best results with your laundry."
+  },
+  {
+    "query_num": 2,
+    "query": "What toothpaste do you have?",
+    "response": "Available toothpaste (15 varieties):\n\nColgate:\n  \u2022 Colgate Strong Teeth 25g - Rs 30 (Blue zone)\n  \u2022 Colgate Strong Teeth 50g - Rs 55 (Blue zone)\n  \u2022 Colgate Strong Teeth 75g - Rs 80 (Blue zone)\n  ... ..."
+  },
+  {
+    "query_num": 3,
+    "query": "Show me all toothpaste",
+    "response": "Available toothpaste (15 varieties):\n\nColgate:\n  \u2022 Colgate Strong Teeth 25g - Rs 30 (Blue zone)\n  \u2022 Colgate Strong Teeth 50g - Rs 55 (Blue zone)\n  \u2022 Colgate Strong Teeth 75g - Rs 80 (Blue zone)\n  ... ..."
+  },
+  {
+    "query_num": 4,
+    "query": "What refined oils do you have?",
+    "response": "Available cooking oil (15 varieties):\n\nFortune:\n  \u2022 Fortune Sunflower Oil 500ml - Rs 85 (Orange zone)\n  \u2022 Fortune Sunflower Oil 1L - Rs 160 (Orange zone)\n  \u2022 Fortune Sunflower Oil 2L - Rs 310 (Orange ..."
+  },
+  {
+    "query_num": 5,
+    "query": "Sensodyne Rapid Relief 25g",
+    "response": "The exact product isn't available right now, but here are some great alternatives:\nColgate Strong Teeth 25g (\u20b930, Blue zone)\nColgate Strong Teeth 50g (\u20b955, Blue zone)\nColgate Strong Teeth 75g (\u20b980, Bl..."
+  },
+  {
+    "query_num": 6,
+    "query": "Dhara Refined Sunflower Oil 5L",
+    "response": "The exact product isn't available right now, but here are some great alternatives:\nFortune Sunflower Oil 500ml (\u20b985, Orange zone)\nFortune Sunflower Oil 1L (\u20b9160, Orange zone)\nFortune Sunflower Oil 2L ..."
+  },
+  {
+    "query_num": 7,
+    "query": "Toothpaste for sensitivity",
+    "response": "Hi there! For sensitivity, I recommend our Sensodyne Rapid Relief toothpaste, which is \u20b930 and located in the blue zone. A helpful tip is to use it twice a day for the best results."
+  },
+  {
+    "query_num": 8,
+    "query": "Whitening toothpaste",
+    "response": "Hi there! You're looking for whitening toothpaste, and I can help with that. The Colgate Visible White 75g is a great choice at \u20b980, and you'll find it in our blue zone. For best results, try using it..."
+  },
+  {
+    "query_num": 9,
+    "query": "Compare Dhara and Saffola oils",
+    "response": "PRODUCT COMPARISON\n==================================================\n\nDhara:\n  Dhara Pure Ghee 500ml\n  Price: Rs 100\n  Size: 500ml\n  Location: Yellow zone\n  Details: Pure Ghee cooking oil - light and..."
+  },
+  {
+    "query_num": 10,
+    "query": "Where is the toothpaste?",
+    "response": "The exact product isn't available right now, but here are some great alternatives:\nColgate Strong Teeth 25g (\u20b930, Blue zone)\nColgate Strong Teeth 50g (\u20b955, Blue zone)\nColgate Strong Teeth 75g (\u20b980, Bl..."
+  },
+  {
+    "query_num": 11,
+    "query": "Toothpaste under 50",
+    "response": "Hi there! I can help you find some toothpaste under 50 rupees. The Colgate MaxFresh Gel 25g is just \u20b930 and you'll find it in our blue zone. A great tip is to try this one for a really refreshing feel..."
+  },
+  {
+    "query_num": 12,
+    "query": "Cheapest oil",
+    "response": "I found a cooking oil, but you asked for a oil. Did you mean the Saffola Aura 500ml, or would you like me to search again?"
+  },
+  {
+    "query_num": 13,
+    "query": "Most expensive ghee",
+    "response": "I found a detergent, but you asked for a ghee. Did you mean the Ghadi Detergent Powder 5kg, or would you like me to search again?"
+  },
+  {
+    "query_num": 14,
+    "query": "Oil in 1L size",
+    "response": "The exact product isn't available right now, but here are some great alternatives:\nDhara Pure Ghee 1L (\u20b9170, Yellow zone)\nDhara Mustard Oil 1L (\u20b9174, Yellow zone)\nSundrop Super Lite 1L (\u20b9180, Yellow z..."
+  },
+  {
+    "query_num": 15,
+    "query": "What would you recommend for toothpaste?",
+    "response": "Hi there! For a refreshing clean, I'd recommend the Colgate MaxFresh Gel 50g for just \u20b955. You can find it in our blue zone, and it's great for keeping your breath fresh all day."
+  },
+  {
+    "query_num": 16,
+    "query": "Do you have Colgate?",
+    "response": "Yes, we do have Colgate Visible White 25g for \u20b930. You can find it in our blue zone, which is located towards the front of the store. For best results, try using it twice a day."
+  },
+  {
+    "query_num": 17,
+    "query": "Best oil for cooking",
+    "response": "Hi there! For everyday cooking, our Saffola Tasty 5L is a great choice at \u20b9771. You'll find it in our yellow zone, and it's vitamin-enriched for your meals."
+  }
+]
