@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+reta-ai-env/
+.env
+
+# OS junk
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
