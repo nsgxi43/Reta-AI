@@ -1,97 +1,130 @@
-# RetaAI Pipeline
+# RetaAI: Intelligent Retail Assistant
+
+An AI-powered retail recommendation system with voice input, natural language processing, and intelligent product retrieval using Retrieval-Augmented Generation (RAG). The system helps customers find the right products through a conversational interface.
+
+---
 
 ## Overview
 
-This project implements an upgraded recommendation pipeline designed to improve retrieval accuracy, contextual understanding, filtering intelligence, and response quality. The system integrates structured intent parsing, vector-based retrieval, and intelligent response generation to deliver relevant and user-centric results.
+Reta-AI is a conversational retail assistant that enables product discovery using:
+
+- Vector embeddings for semantic search over 2,000 products  
+- Structured intent parsing (11-field schema)  
+- Priority-based constraint filtering with intelligent relaxation  
+- Gemini-powered natural language response generation  
+- Voice input with transcription and fuzzy correction  
+- Store navigation using color-based location mapping  
+- Web interface built with Next.js  
+
+### Latest Improvements
+
+- Full dataset integration using all 18 columns  
+- Enhanced 11-field intent schema  
+- Priority-based 9-step constraint engine  
+- Precomputed alternate product recommendations  
+- Store location mapping using color zones  
+- Rich contextual responses using full dataset  
+
+---
 
 ## Deployment
 
 The application is deployed and accessible at:
 
-Web Link: [https://retaai.vercel.app/](https://retaai.vercel.app/)
+Web Link: https://retaai.vercel.app/
 
-Note: Initial response may take a few seconds due to cold start. Subsequent responses are faster.
+Note: The first response may take a few seconds due to cold start. Subsequent responses are faster.
 
-## Key Improvements
+---
 
-### 1. Data Layer Expansion
+## Features
 
-* Utilizes all 18 columns from the dataset
-* Uses precomputed `embedding_text` for improved semantic quality
-* Eliminates the need for runtime embedding reconstruction
+- Semantic search using FAISS with normalized 384-dimensional embeddings  
+- Structured intent extraction (category, brand, size, budget, seasonal, etc.)  
+- Intelligent filtering using ordered constraint pipeline  
+- Context-aware recommendations with alternates  
+- Voice input with improved transcription accuracy  
+- Natural language responses with product and location details  
+- Real-time web-based chat interface  
+- Coverage of 2,000+ products  
 
-### 2. Intent Parser Enhancement
+---
 
-* Upgraded from 8-field to 11-field schema
-* Added fields: `product_line`, `unit_type`, `source`, `comparison`
-* Improved structured extraction for category, brand, size, and seasonal attributes
+## Architecture
 
-### 3. Constraint Engine
+Frontend (Next.js)  
+- Chat interface with voice and text input  
 
-* Implements priority-based filtering (9-step pipeline)
-* Hard constraints applied first (stock, category, brand)
-* Soft filters applied later (seasonal, source)
-* Includes smart relaxation (e.g., relax brand filter if no results)
+Backend (FastAPI)  
+- Query parsing  
+- FAISS vector retrieval  
+- Constraint filtering  
+- Recommendation engine  
+- Response generation using Gemini  
 
-### 4. Retrieval System
+Data Layer  
+- 18-column product dataset  
+- FAISS index for similarity search  
+- Metadata stored as DataFrame  
 
-* Integrated FAISS index with normalized embeddings
-* Supports ~2000 products with 384-dimensional vectors
-* Stores full dataset as a DataFrame (pickle format)
-* Deduplicates results based on product name
+---
 
-### 5. Recommendation Engine
+## Key Components
 
-* Uses `alternate_product_ids` for meaningful alternatives
-* Incorporates store navigation hints using `assigned_color`
+### 1. Intent Parser
+Converts user queries into structured 11-field schema including category, brand, size, budget, and preferences.
 
-### 6. Response Generation
+### 2. Constraint Engine
+Applies filters in priority order:
+1. Stock availability  
+2. Category  
+3. Brand (with relaxation if needed)  
+4. Price  
+5. Size  
+6. Seasonal  
+7. Source  
+8. Exclusions  
 
-* Passes full dataset context to the language model
-* Generates natural language responses with:
+### 3. Retrieval System
+- FAISS-based vector search  
+- Normalized embeddings (384-dim)  
+- Deduplication of products  
 
-  * Product suggestions
-  * Location guidance
-  * Alternatives and comparisons
+### 4. Recommendation Engine
+- Selects best product  
+- Uses precomputed alternate product IDs  
+- Adds store location hints  
 
-### 7. Voice Pipeline
+### 5. Response Generator
+- Uses Gemini for natural language output  
+- Includes product details, alternatives, and location guidance  
 
-* Enhanced vocabulary including product and brand names
-* Improved fuzzy matching for transcription correction
-
-### 8. Pipeline Simplification
-
-* Streamlined RAG architecture
-* Reduced complexity in response handling
-* Improved performance and maintainability
-
-## Architecture Summary
-
-1. User Query Input (Text/Voice)
-2. Intent Parsing (11-field schema)
-3. Constraint Filtering (priority-based)
-4. Vector Retrieval (FAISS)
-5. Recommendation Resolution
-6. Response Generation (LLM)
-7. Output Delivery
-
-## Performance Characteristics
-
-* Improved retrieval accuracy due to structured embeddings
-* Reduced latency through optimized pipeline flow
-* Better result relevance via constraint prioritization
-* Scalable architecture with potential for horizontal scaling
+---
 
 ## Tech Stack
 
-* Backend: Python
-* Retrieval: FAISS
-* LLM: Gemini
-* Hosting: AWS EC2
-* Frontend: Vercel
+- Backend: Python (FastAPI)  
+- Retrieval: FAISS  
+- LLM: Gemini  
+- Frontend: Next.js  
+- Hosting: AWS EC2 (backend), Vercel (frontend)  
 
-## Notes
+---
 
-* Performance depends on instance size and external API latency
-* First request may experience cold start delay
-* System can be scaled using load balancing and multiple instances
+## Performance Notes
+
+- Retrieval accuracy improved using structured embeddings  
+- Faster filtering using priority-based constraints  
+- Reduced latency through simplified pipeline  
+- First request may experience cold start delay  
+
+---
+
+
+## Documentation
+
+Refer to the following for more details:
+
+- PIPELINE_UPGRADE_SUMMARY.md  
+- INTEGRATION_GUIDE.md  
+- CUSTOMER_TEST_CASES.md  
